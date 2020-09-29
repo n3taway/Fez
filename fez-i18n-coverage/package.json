@@ -1,5 +1,5 @@
 {
-  "name": "fez-i18n-coverage",
+	"name": "fez-i18n-coverage",
 	"displayName": "fez-i18n-coverage",
 	"description": "fe i18n coverage test",
 	"version": "0.0.1",
@@ -10,14 +10,14 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:fez-i18n-coverage.helloWorld"
+		"onCommand:fez-i18n-coverage.checkCoverage"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "fez-i18n-coverage.helloWorld",
-				"title": "Hello World"
+				"command": "fez-i18n-coverage.checkCoverage",
+				"title": "fez-i18n: check coverage"
 			}
 		]
 	},
@@ -30,16 +30,20 @@
 		"test": "node ./out/test/runTest.js"
 	},
 	"devDependencies": {
-		"@types/vscode": "^1.49.0",
+		"@types/fs-extra": "^9.0.1",
 		"@types/glob": "^7.1.3",
 		"@types/mocha": "^8.0.0",
 		"@types/node": "^14.0.27",
-		"eslint": "^7.9.0",
+		"@types/vscode": "^1.49.0",
 		"@typescript-eslint/eslint-plugin": "^4.1.1",
 		"@typescript-eslint/parser": "^4.1.1",
+		"eslint": "^7.9.0",
 		"glob": "^7.1.6",
 		"mocha": "^8.1.3",
 		"typescript": "^4.0.2",
 		"vscode-test": "^1.4.0"
+	},
+	"dependencies": {
+		"fs-extra": "^9.0.1"
 	}
 }
